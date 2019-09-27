@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="revised.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navi">
+            <a href="#">Home</a>
+            <a href="#">Add New Customer</a>
+            <a href="#">SC / PWD Search</a>
+            <a href="#">Logout</a>
+        </div>
+        <div class="title">
+            <h1>DGHC</h1>
+            <span>Dashboard</span>
+        </div>
+    </nav>
+    <section>
+        <form class="searchfield" action="search.php" method="post">
+            <div class="container">
+                <h2>Search</h2>
+                <input class="searchbox" placeholder="Input Name or Address" type="text" name="fnameSearch" tabindex="1" autocomplete="off">
+                <!-- <input class="searchbox" type="text" name="adrSearch" placeholder="Customer's Name" tabindex="2" autocomplete="off"> -->
+                <input type="submit" name="search" value="SEARCH">
+            </div>
+        </form>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Customer's Name</th>
+                <th>Address</th>
+                <th>Landmark</th>
+                <th>Tank Type</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Egogoy</td>
+                <td>Egogoy</td>
+                <td>Egogoy</td>
+                <td>POL</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
