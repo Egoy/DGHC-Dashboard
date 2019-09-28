@@ -11,7 +11,8 @@ body {
     font-family: Poppins, Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 200px auto;
-    background: linear-gradient(90deg, #00e1ff 10%, #4eb4a771 90%)
+    background: linear-gradient(90deg, #00e1ff 10%, #4eb4a771 90%);
+    font-size: 20px;
 }
 
 /* Navigation */
@@ -19,8 +20,7 @@ body {
 nav {
     height: 100%;
     width: 200px;
-    /* position: fixed;
-    z-index: 1; */
+    position: sticky;
     top: 0;
     left: 0;
     background-color: #333;
@@ -29,8 +29,8 @@ nav {
 }
 
 nav .title {
-    padding: 20px;
-    position: absolute;
+    padding: 1.5em;
+    position: relative;
     bottom: 0;
     color: #fff;
 }
@@ -41,12 +41,14 @@ nav a {
     text-decoration: none;
     display: block;
     transition: .5s;
+    font-size: .7em;
 }
 
 nav a:hover {
     background-color: #0095a8;
     /* color: black; */
 }
+
 
 /* section */
 
@@ -106,7 +108,50 @@ input[type="submit"]:hover {
     background: #0095a8;
 }
 
-section table {
+/* section table */
+
+table {
     align-self: center;
     width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    /* border-radius: 24px; */
+    padding: 1em;
+    font-size: .9em;
+    border-collapse: collapse;
+}
+
+table tr {
+    margin: 2px;
+    padding: 10px;
+    /* border: 2px solid red; */
+}
+
+table tr th {
+    background: #333;
+    color: #fff;
+}
+
+table tr td {
+    text-align: center;
+    cursor: pointer;
+    /* padding: 10px 20px; */
+}
+
+table tr td:nth-child(1) {
+    padding: .1em;
+    background: #333;
+    color: #fff;
+}
+
+table tr td a {
+    color: white;
+    padding: 0 16px;
+    text-decoration: none;
+    transition: .5s;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+}
+
+table tr td a:hover {
+    background-color: #0095a8;
 }
