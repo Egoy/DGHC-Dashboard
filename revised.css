@@ -89,6 +89,8 @@ input[type="text"] {
     outline: none;
     border-radius: 25px 0 0 25px;
     padding: 0 25px;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+    
 }
 
 input[type="submit"] {
@@ -102,6 +104,7 @@ input[type="submit"] {
     background: #333;
     color: #fff;
     left: -5px;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 }
 
 input[type="submit"]:hover {
@@ -121,20 +124,43 @@ table {
 }
 
 table tr {
-    margin: 2px;
-    padding: 10px;
-    /* border: 2px solid red; */
+    height: 3em;
+    background: #fff;
+}
+
+table tr:nth-child(even) {
+    background: hsl(0, 0%, 54%);
 }
 
 table tr th {
     background: #333;
     color: #fff;
+    text-align: left;
+    padding: 0px .7em;
 }
+
+table td {
+    padding: 0px .7em;
+}
+
+/* 
+table tr {
+    margin: 2px;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+
 
 table tr td {
     text-align: center;
     cursor: pointer;
-    /* padding: 10px 20px; */
+    padding: 10px 20px;
+}
+
+.cus-name {
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 table tr td:nth-child(1) {
@@ -154,4 +180,6 @@ table tr td a {
 
 table tr td a:hover {
     background-color: #0095a8;
-}
+} 
+*/
+
