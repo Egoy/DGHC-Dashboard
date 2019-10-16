@@ -35,21 +35,20 @@ function filterTable($query)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="revised.css">
+    <link rel="stylesheet" href="design2.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="main-container">
     <nav>
-        <div class="title">
+        <!-- <div class="title">
             <h1>DGHC</h1>
             <span>Dashboard</span>
-        </div>
-        <div class="navi">
-            <a href="#">Home</a>
-            <a href="#">Add New Customer</a>
-            <a href="#">SC / PWD Search</a>
-            <a href="#">Logout</a>
-        </div>
+        </div> -->
+            <a href="#"><span>H</span>ome</a>
+            <a href="addnewcus.html"><span>A</span>dd New Customer</a>
+            <a href="#"><span>S</span>C / PWD Search</a>
+            <a href="#"><span>L</span>ogout</a>
     </nav>
     <section>
         <form class="searchfield" action="revised.php" method="post">
@@ -60,15 +59,19 @@ function filterTable($query)
                 <input type="submit" name="search" value="SEARCH">
             </div>
         </form>
-        <table id="tableMain">
-            <tr>
-                <th>ID</th>
-                <th>Customer Name</th>
-                <th>Address</th>
-                <th>Landmark</th>
-                <th>Tank Type</th>
-                <!-- <th>Send to SuperHub</th> -->
-            </tr>
+    </section>
+    <article>
+    <table id="tableMain">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer Name</th>
+                    <th>Address</th>
+                    <th>Landmark</th>
+                    <th>Tank</th>
+                    <!-- <th>Send to SuperHub</th> -->
+                </tr>
+            </thead>
             <?php
             include("includes/connections.php");
                 
@@ -83,27 +86,30 @@ function filterTable($query)
                         $db_adr = $row["adr"];
                         $db_lmark = $row["lmark"];
                         $db_ttype = $row["ttype"];
+                        $db_contact = $row["cusno"];
                         
-                        echo    "<tr class='breakrow'>
-                                <td id='cus-id'>$db_ID</td>
+                        echo    "<tbody><tr class='breakrow'>
+                                <td>$db_ID</td>
                                 <td>$db_fname $db_lname</td>
                                 <td>$db_adr</td>
                                 <td>$db_lmark</td>
-                                <td>$db_ttype</td>";
-                        echo    "</tr>";
-                        echo    "<tr class='datarow' style='display:none'><td colspan='5'>
-                                <a href='#'>Edit Customer Info</a>
-                                <a href='#'>Delete Customer Data</a></td></tr></div>";
+                                <td>$db_ttype</td></tr>";
+                        echo    "<tr class='datarow' style='display:none'>
+                                <td colspan='5'>
+                                <a class='options' href='edit.php?ID=$user_id'>Update</a>
+                                <div class='label'>Contact Number:</div><div class='result'>$db_contact</div>
+                                </td>
+                                </tr></tbody>";
                 }
         ?>
         </table>
-    </section>
+    </article>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
         //collapse and expand sections
 //$('.breakrow').click(function(){
 $('#tableMain').on('click', 'tr.breakrow',function(){
-    $(this).nextUntil('tr.breakrow').slideToggle(100);
+    $(this).nextUntil('tr.breakrow').slideToggle(500);
 });
 </script>
 </body>
