@@ -1,0 +1,139 @@
+/* Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Start */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    align-self: center;
+    color: #272643;
+}
+
+nav a:hover {
+    color: #2c698d  ;
+}
+
+nav a span {
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+section {
+    align-self: center;
+    margin: 20px 0;
+}
+
+article {
+    margin: 10px 30px;
+}
+
+table {
+    width:100%;
+    border-collapse: collapse;
+    background: #e3f6f5;
+    font-size: 1.2em
+}
+
+tr:hover {
+    background: red;
+}
+
+td {
+   border-bottom: 2px solid red;
+}
+
+td:nth-child(2) {
+    font-weight: 800;
+}
