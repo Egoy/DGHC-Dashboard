@@ -38,6 +38,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: Poppins, Arial, Helvetica, sans-serif;
+  /* background: #252e42; */
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -87,6 +88,11 @@ select {
     flex-direction: column;
 }
 
+.nav-container {
+  background: #ffffff;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
 nav {
     width: 100%;
     display: flex;
@@ -102,7 +108,9 @@ nav a {
 }
 
 nav a:hover {
-    color: #2c698d  ;
+    color: #2c698d;
+    transition: 5s;
+    border-bottom: 2px solid #272643;
 }
 
 nav a span {
@@ -111,29 +119,70 @@ nav a span {
 }
 
 section {
-    align-self: center;
-    margin: 20px 0;
-}
-
-article {
-    margin: 10px 30px;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+    height: auto;
 }
 
 table {
-    width:100%;
+    margin-top: 20px;
+    width: 100%;
     border-collapse: collapse;
-    background: #e3f6f5;
-    font-size: 1.2em
+    font-size: 1.2em;
+    /* margin: 0px 20px; */
+    box-sizing: inherit;
+    overflow: hidden;
+    background: #272643;
+    border-bottom: 1px solid black;
 }
 
-tr:hover {
-    background: red;
+th {
+  /* font-weight: 900; */
+  height: 30px;
+  background: rgb(172, 172, 172);
+  text-align: left;
+}
+
+th {
+  padding-left: 20px;
+}
+
+th:nth-child(5) {
+  text-align: center;
+  padding: -20px;
+}
+
+tr {
+  background: rgba(255, 255, 255);
+}
+
+
+tr:not(:nth-child(0)):not(:nth-child(2)) {
+  border-top: 1px solid black;
+  /* border-bottom: 2px solid black; */
+}
+
+tr:not(:nth-child(0)):not(:nth-child(2)):hover {
+  background: rgba(255, 255, 255, .20);
+  color: white;
+  cursor: pointer;
 }
 
 td {
-   border-bottom: 2px solid red;
+  font-size: 1.2em;
+  padding: .5em;
+}
+
+td:nth-child(1) {
+  text-align: center;
 }
 
 td:nth-child(2) {
-    font-weight: 800;
+  font-weight: 800;
+  padding-left: 20px;
+}
+
+td:nth-child(5) {
+  text-align: center;;
 }
