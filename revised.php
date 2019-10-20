@@ -35,7 +35,7 @@ function filterTable($query)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="design2.css">
+    <link rel="stylesheet" href="revised.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -95,9 +95,14 @@ function filterTable($query)
                                 <td>$db_lmark</td>
                                 <td>$db_ttype</td></tr>";
                         echo    "<tr class='datarow' style='display:none'>
+                                <td class='addinfo' colspan='5'>
+                                <div class='label'>Contact Number:</div><div class='result'>$db_contact</div>
+                                </td></tr>
+                                <tr class='datarow' style='display:none'>
                                 <td colspan='5'>
                                 <a class='options' href='edit.php?ID=$user_id'>Update</a>
-                                <div class='label'>Contact Number:</div><div class='result'>$db_contact</div>
+                                <a class='options' href='edit.php?ID=$user_id'>Order</a>
+                                <a class='options' href='edit.php?ID=$user_id'>Delete</a>
                                 </td>
                                 </tr></tbody>";
                 }
