@@ -1,185 +1,205 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+/* Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
 body {
-    height: 100vh;
-    width: 100%;
-    font-family: Poppins, Arial, Helvetica, sans-serif;
-    display: grid;
-    grid-template-columns: 200px auto;
-    background: linear-gradient(90deg, #00e1ff 10%, #4eb4a771 90%);
-    font-size: 20px;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  /* background: #252e42; */
 }
 
-/* Navigation */
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Start */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-container {
+  background: #ffffff;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
 
 nav {
-    height: 100%;
-    width: 200px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    /* opacity: 20%; */
-    overflow-x: hidden;
-}
-
-nav .title {
-    padding: 1.5em;
-    position: relative;
-    bottom: 0;
-    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
 }
 
 nav a {
-    color: white;
-    padding: 16px;
+    margin: 0 20px;
     text-decoration: none;
-    display: block;
-    transition: .5s;
-    font-size: .7em;
+    align-self: center;
+    color: #272643;
 }
 
 nav a:hover {
-    background-color: #0095a8;
-    /* color: black; */
+    color: #2c698d;
+    transition: 5s;
+    border-bottom: 2px solid #272643;
 }
 
-
-/* section */
+nav a span {
+    font-size: 1.1em;
+    font-weight: 700;
+}
 
 section {
-    margin: 1em;
-    grid-template-columns: 2/3;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-content: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    height: auto;
 }
-
-/* section search bar*/
-
-section form {
-    align-self: center;
-    width: 500px;
-    margin: 0 0 20px 0;
-}
-
-form h2 {
-    text-align: center;
-    text-transform: uppercase;
-}
-
-input {
-    position: relative;
-    display: inline-block;
-    font-size: 16px;
-    transition: .5s;
-}
-
-input[type="text"] {
-    background: #fff;
-    width: 340px;
-    height: 50px;
-    border: none;
-    outline: none;
-    border-radius: 25px 0 0 25px;
-    padding: 0 25px;
-    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
-    
-}
-
-input[type="submit"] {
-    position: relative;
-    border-radius: 0 25px 25px 0;
-    width: 150px;
-    height: 50px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: #333;
-    color: #fff;
-    left: -5px;
-    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
-}
-
-input[type="submit"]:hover {
-    background: #0095a8;
-}
-
-/* section table */
 
 table {
-    align-self: center;
+    margin-top: 20px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    /* border-radius: 24px; */
-    padding: 1em;
-    font-size: .9em;
     border-collapse: collapse;
+    font-size: 1.2em;
+    /* margin: 0px 20px; */
+    box-sizing: inherit;
+    overflow: hidden;
+    background: #272643;
+    border-bottom: 1px solid black;
 }
 
-table tr {
-    height: 3em;
-    background: #fff;
+th {
+  /* font-weight: 900; */
+  height: 30px;
+  background: hsla(242, 28%, 21%, .5);
+  text-align: left;
 }
 
-table tr:nth-child(even) {
-    background: hsl(0, 0%, 54%);
-}
-
-table tr th {
-    background: #333;
-    color: #fff;
-    text-align: left;
-    padding: 0px .7em;
-}
-
-table td {
-    padding: 0px .7em;
-}
-
-/* 
-table tr {
-    margin: 2px;
-    padding: 10px;
-    border: 2px solid red;
-}
-
-
-
-table tr td {
+th:nth-child(1) {
     text-align: center;
-    cursor: pointer;
-    padding: 10px 20px;
+    font-size: .7em;
+    padding-right: 10px;
 }
 
-.cus-name {
-    font-weight: 900;
-    text-transform: uppercase;
+th:nth-child(5) {
+  text-align: center;
+  /* padding: -20px; */
 }
 
-table tr td:nth-child(1) {
-    padding: .1em;
-    background: #333;
-    color: #fff;
+tr {
+  background: rgba(255, 255, 255);
 }
 
-table tr td a {
-    color: white;
-    padding: 0 16px;
+
+tr:not(:nth-child(0)):not(:nth-child(2)):not(:nth-child(3)) {
+  border-top: 1px solid black;
+  /* border-bottom: 2px solid black; */
+}
+
+tr:not(:nth-child(0)):not(:nth-child(2)):not(:nth-child(3)):hover {
+  background: rgba(255, 255, 255, .20);
+  color: white;
+  cursor: pointer;
+}
+
+td {
+  font-size: 1.2em;
+  padding: .5em 0;
+}
+
+td:nth-child(1) {
+  text-align: center;
+  font-size: .7em;
+  padding-right: 10px;
+}
+
+td:nth-child(2) {
+  font-weight: 900;
+  /* padding-left: 20px; */
+}
+
+td:nth-child(5) {
+  text-align: center;
+}
+
+.label {
+    font-size: 18px;
+}
+
+.options {
     text-decoration: none;
-    transition: .5s;
-    border-right: 2px solid white;
-    border-left: 2px solid white;
+    text-transform: uppercase;
+    padding: 0 20px;
+    font-size: 20px;
+    height: 30px;
+    width: 50px;
 }
-
-table tr td a:hover {
-    background-color: #0095a8;
-} 
-*/
-
