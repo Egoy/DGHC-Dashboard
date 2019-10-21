@@ -35,7 +35,7 @@ function filterTable($query)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="revised.css">
+    <link rel="stylesheet" href="design2.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -52,12 +52,10 @@ function filterTable($query)
     </nav>
     <section>
         <form class="searchfield" action="revised.php" method="post">
-            <div class="container">
-                <!-- <h2>Search</h2> -->
                 <input class="searchbox" placeholder="Input Name or Address" type="text" name="fnameSearch" tabindex="1" autocomplete="off">
                 <!-- <input class="searchbox" type="text" name="adrSearch" placeholder="Customer's Name" tabindex="2" autocomplete="off"> -->
-                <input type="submit" name="search" value="SEARCH">
-            </div>
+                <!-- <input type="submit" name="search" value="SEARCH" > -->
+                <button type="submit" class="arrow_box" value="SEARCH" name="search">Submit</button>
         </form>
     </section>
     <article>
