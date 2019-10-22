@@ -124,7 +124,7 @@ section {
     justify-content: center;
     align-self: center;
     margin: 10px 0px;
-    height: 50px;
+    height: 70px;
     background: hsla(0, 0%, 45%, .10);
     width: 400px;
     border-radius: 10px;
@@ -134,13 +134,14 @@ section {
 section form {
     align-self: center;
     margin: 0 auto;
+    height: 30px;
 }
 
-section input[type=text] {
+section input {
     width: 250px;
     height: 30px;
-    box-sizing: border-box;
-    overflow: hidden;
+    /* box-sizing: border-box; */
+    /* overflow: hidden; */
     border-radius: 4px 0 0 4px;
     border-style: none;
     padding-left: 10px;
@@ -151,7 +152,7 @@ section input[type=text] {
     /* padding-left: 10px; */
 }
 
-section button {
+section .arrow_box {
   position: relative;
   border-style: none;
   height: 30px;
@@ -163,7 +164,7 @@ section button {
   font-size: .9em;
 }
 
-section button:after, button:before {
+section .arrow_box:after, .arrow_box:before {
   right: 100%;
 	top: 50%;
 	border: solid transparent;
@@ -174,7 +175,7 @@ section button:after, button:before {
 	pointer-events: none;
 }
 
-section button:after {
+section .arrow_box:after {
 	border-color: rgba(136, 183, 213, 0);
 	border-right-color: #272643;
 	border-width: 6px;
@@ -213,8 +214,9 @@ table {
 th {
   /* font-weight: 900; */
   height: 30px;
-  background: hsla(242, 28%, 21%, .5);
+  background: hsla(242, 28%, 21%, 1);
   text-align: left;
+  color: #fff;
 }
 
 th:nth-child(1) {
@@ -243,6 +245,7 @@ tr:not(:nth-child(0)):not(:nth-child(2)):not(:nth-child(3)):hover {
   color: white;
   cursor: pointer;
 }
+
 
 td {
   font-size: 1.2em;
