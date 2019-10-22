@@ -57,6 +57,7 @@ function filterTable($query)
                 <!-- <input type="submit" name="search" value="SEARCH" > -->
                 <button type="submit" class="arrow_box" value="SEARCH" name="search">Submit</button>
         </form>
+        
     </section>
     <article>
     <table id="tableMain">
