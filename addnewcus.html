@@ -1,33 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="revised.css">
+    <link rel="stylesheet" href="design2.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="main-container">
     <nav>
-        <div class="title">
+        <!-- <div class="title">
             <h1>DGHC</h1>
             <span>Dashboard</span>
-        </div>
-        <div class="navi">
-            <a href="revised.php">Home</a>
-            <a href="#">Add New Customer</a>
-            <a href="#">SC / PWD Search</a>
-            <a href="#">Logout</a>
-        </div>
+        </div> -->
+            <a href="revised.php" class="inactive"><span>H</span>ome</a>
+            <a href="addnewcus.html" class="active"><span>A</span>dd New Customer</a>
+            <a href="#" class="inactive"><span>SC</span> / PWD Search</a>
+            <a href="#" class="inactive"><span>L</span>ogout</a>
     </nav>
 <section class="addcusform">
     <h2>Add New Customer</h2>
-    <form action="recordsaved.php" method="POST">
-        <div class="reg-container">
-           <div class="label">First Name</div><div class="textbox"><input type="text" name="fname" tabindex="1" autocomplete="off"></div>
-        </div>
-    </form>
 </section>
+<article class="newcusform">
+    <form action="recordsaved.php" method="POST">
+        <div class="container">
+           <div class="category">Personal Info</div>
+           <div class="sub-container">
+           <label for="">First Name</label><div class="textbox"><input type="text" name="fname" tabindex="1" autocomplete="off"></div>
+           <label for="">Last Name</label><div class="textbox"><input type="text" name="fname" tabindex="1" autocomplete="off"></div>
+           <label for="">Address</label><div class="textbox"><input type="text" name="fname" tabindex="1" autocomplete="off"></div>
+            </div>
+        </div>
+            <div class="container">
+           <div class="category">Other Info</div>
+           <div class="sub-container">
+           <label for="">Landmark</label><div class="textbox"><input type="text" name="fname" tabindex="1" autocomplete="off"></div>
+           <label for="">Date of Birth</label><div class="textbox"><input type="date" name="dateofbirth" id="dateofbirth"></div>
+           <label for="">Contact Number</label><div class="textbox"><input type="text" name="fname" tabindex="1" autocomplete="off"></div>
+           <label for="">Tank Type</label><br>
+                <select>
+                <option value="volvo">POL</option>
+                <option value="saab">COM</option>
+                <option value="opel">BUKID</option>
+                <option value="audi">COMMERCIAL</option>
+                </select>
+            </div>
+            </div>
+            <div class="buttons">
+            <input type="reset" value="Clear">
+            <input type="submit" value="Submit">
+            </div>
+    </form>
+</article>
+
 </body>
 </html>
