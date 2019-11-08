@@ -30,7 +30,7 @@ function filterTable($query)
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -45,10 +45,10 @@ function filterTable($query)
             <h1>DGHC</h1>
             <span>Dashboard</span>
         </div> -->
-            <a href="#"><span>H</span>ome</a>
-            <a href="addnewcus.html"><span>A</span>dd New Customer</a>
-            <a href="#"><span>S</span>C / PWD Search</a>
-            <a href="#"><span>L</span>ogout</a>
+            <a href="revised.php" class="active"><span>H</span>ome</a>
+            <a href="addnewcus.html" class="inactive"><span>A</span>dd New Customer</a>
+            <a href="#" class="inactive"><span>SC</span> / PWD Search</a>
+            <a href="#" class="inactive"><span>L</span>ogout</a>
     </nav>
     <section>
         <form class="searchfield" action="revised.php" method="post">
@@ -76,38 +76,40 @@ function filterTable($query)
                 
                 
                 while($row = mysqli_fetch_assoc($search_result)){
-    
-                        $user_id = $row["ID"];
-    
-                        $db_ID = $row["ID"];
+   
+                        $user_ID = $row["ID"];
                         $db_fname = $row["fname"];
                         $db_lname = $row["lname"];
                         $db_adr = $row["adr"];
                         $db_lmark = $row["lmark"];
                         $db_ttype = $row["ttype"];
                         $db_contact = $row["cusno"];
-                        
+                        //$db_lastorder = $row["lastorder"];
+
                         echo    "<tbody><tr class='breakrow'>
-                                <td>$db_ID</td>
+                                <td>$user_ID</td>
                                 <td>$db_fname $db_lname</td>
                                 <td>$db_adr</td>
                                 <td>$db_lmark</td>
                                 <td>$db_ttype</td></tr>";
-                        echo    "<tr class='datarow' style='display:none'>
-                                <td class='addinfo' colspan='5'>
+                        echo    "<tr class='datarow' style='display:none !important'>
+                                <td class='addinfo' colspan='5' >
                                 <div class='label'>Contact Number:</div><div class='result'>$db_contact</div>
+                                
                                 </td></tr>
                                 <tr class='datarow' style='display:none'>
                                 <td colspan='5'>
-                                <a class='options' href='edit.php?ID=$user_id'>Update</a>
-                                <a class='options' href='edit.php?ID=$user_id'>Order</a>
-                                <a class='options' href='edit.php?ID=$user_id'>Delete</a>
+                                <a class='options' href='edit.php?ID=$user_ID'>Update</a>
+                                <a class='options' href='testdate.php?ID=$user_ID'>Order</a>
+                                <a class='options' href='edit.php?ID=$user_ID'>Delete</a>
                                 </td>
                                 </tr></tbody>";
                 }
         ?>
         </table>
     </article>
+    <!-- <div class='label'>Last Order:</div><div class='result'>$db_lastorder</div> -->
+    <!-- <div class='label'>Last Purchase:</div><div class='result'>$db_lastorder</div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
         //collapse and expand sections
