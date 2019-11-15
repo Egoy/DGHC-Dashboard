@@ -146,7 +146,7 @@ section form {
     height: 30px;
 }
 
-section input {
+section input[type="text"] {
     width: 250px;
     height: 30px;
     /* box-sizing: border-box; */
@@ -158,6 +158,7 @@ section input {
 
 ::placeholder {
     font-style: italic;
+    font-size: .9em;
     /* padding-left: 10px; */
 }
 
@@ -165,7 +166,7 @@ section .arrow_box {
   position: relative;
   border-style: none;
   height: 30px;
-  margin-left: -4px;
+  margin-left: -5px;
   background: #272643;
   color: #fff;
   border-radius: 0 4px 4px 0;
@@ -310,7 +311,7 @@ td:nth-child(5) {
     box-sizing: border-box;
     background: hsla(0, 0%, 45%, .10);
     margin: 0 auto;
-    height: auto;
+    height: 520px;
     padding: 10px 1em;
     box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.75);
     border-radius: 14px;
@@ -357,7 +358,7 @@ label {
   font-size: .8em;
 }
 
-input:not([type=submit]):not([type=reset]){
+.newcusform input:not([type=submit]):not([type=reset]){
   border: 1px solid #c4c4c4;
   border-radius: 5px;
   background-color: #fff;
@@ -404,6 +405,7 @@ select {
   margin-top: 10px;
   text-transform: uppercase;
   font-size: .9em;
+  cursor: pointer;
 }
 
 .buttons input[type="submit"] {
