@@ -1,3 +1,12 @@
+<?php
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: login.php');
+	exit();
+}
+?>
+
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +23,9 @@
             <span>Dashboard</span>
         </div> -->
             <a href="revised.php" class="inactive"><span>H</span>ome</a>
-            <a href="addnewcus.html" class="active"><span>A</span>dd New Customer</a>
+            <a href="addnewcus.php" class="active"><span>A</span>dd New Customer</a>
             <a href="#" class="inactive"><span>SC</span> / PWD Search</a>
-            <a href="#" class="inactive"><span>L</span>ogout</a>
+            <a href="logout.php" class="inactive"><span>L</span>ogout</a>
     </nav>
 <section class="addcusform">
     <h2>Add New Customer</h2>
@@ -35,7 +44,7 @@
            <div class="category">Other Info</div>
            <div class="sub-container">
            <label for="">Landmark</label><div class="textbox"><input type="text" name="fname" tabindex="1" autocomplete="off"></div>
-           <label for="">Date of Birth</label><div class="textbox"><input type="date" name="dateofbirth" id="dateofbirth"></div>
+           <label for="">Last Purchase</label><div class="textbox"><input type="date" name="dateofbirth" id="dateofbirth"></div>
            <label for="">Contact Number</label><div class="textbox"><input type="text" name="fname" tabindex="1" autocomplete="off"></div>
            <label for="">Tank Type</label><br>
                 <select>
