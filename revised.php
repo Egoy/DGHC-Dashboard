@@ -46,9 +46,9 @@ function filterTable($query)
             <span>Dashboard</span>
         </div> -->
             <a href="revised.php" class="active"><span>H</span>ome</a>
-            <a href="addnewcus.html" class="inactive"><span>A</span>dd New Customer</a>
+            <a href="addnewcus.php" class="inactive"><span>A</span>dd New Customer</a>
             <a href="#" class="inactive"><span>SC</span> / PWD Search</a>
-            <a href="#" class="inactive"><span>L</span>ogout</a>
+            <a href="logout.php" class="inactive"><span>L</span>ogout</a>
     </nav>
     <section>
         <form class="searchfield" action="revised.php" method="post">
